@@ -1,0 +1,39 @@
+.tile{
+  width: 20px;
+  height: 20px;
+  margin: 2px;
+  display: inline-block;
+}
+
+
+.tile.tile-piece-i{
+  background: maroon;
+}
+
+.tile.tile-piece-j{
+  background: lightgrey;
+}
+
+.tile.tile-piece-l{
+  background: purple;
+}
+
+.tile.tile-piece-o{
+  background: navy;
+}
+
+.tile.tile-piece-s{
+  background: darkgreen;
+}
+
+.tile.tile-piece-t{
+  background: brown;
+}
+
+.tile.tile-piece-z{
+  background: teal;
+}
+
+.tile.tile-preview{
+  background: blue;
+}
