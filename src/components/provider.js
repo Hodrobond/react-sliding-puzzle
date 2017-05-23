@@ -1,7 +1,7 @@
 /**
  * Created by adam.kazberuk on 12/7/2016.
  */
-import React, {Component} from 'react'
+import {Component} from 'react'
 import PropTypes from 'prop-types';
 
 class Provider extends Component {

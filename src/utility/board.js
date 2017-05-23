@@ -25,10 +25,8 @@ export const getInversions = (board) => {
     newArr = newArr.concat(board[i]);
   }
   var inv_count = 0;
-  for (var i = 0; i < newArr.length - 1; i++)
-  {
-    for (var j = i + 1; j < newArr.length; j++)
-    {
+  for (i = 0; i < newArr.length - 1; i++){
+    for (var j = i + 1; j < newArr.length; j++){
       // count pairs(i, j) such that i appears
       // before j, but i > j.
       if (newArr[j] && newArr[i] && newArr[i] > newArr[j])
@@ -53,7 +51,7 @@ export const findBlank = (board) => {
 function fisherYates() {
   for(var k = 0; k < arguments.length; k++){
     var i = arguments[k].length;
-    if ( i == 0 ) return false;
+    if ( i === 0 ) return false;
     while ( --i ) {
        var j = Math.floor( Math.random() * ( i + 1 ) );
        var tempi = arguments[k][i];
@@ -78,7 +76,7 @@ export const fillBoard = (size) => {
   var sortedArray = _.shuffle(unSortedArray);
   let newArray = new Array(size);;
   var count = 0;
-  for(var i=0; i<size; i++){
+  for(i=0; i<size; i++){
     newArray[i] = new Array(size);
     for(var j=0; j<size; j++){
       newArray[i][j] = sortedArray[count];
@@ -86,4 +84,14 @@ export const fillBoard = (size) => {
     }
   }
   return newArray;
+}
+
+export const isSame = (boardA, boardB) => {
+  for(var i=0; i<boardA.length; i++){
+    for(var j=0; j<boardA[i].length; j++){
+      if(boardA[i][j] !== boardB[i][j])
+        return false;
+    }
+  }
+  return true;
 }

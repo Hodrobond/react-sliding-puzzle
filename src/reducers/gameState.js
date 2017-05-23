@@ -2,7 +2,7 @@ import constants from "../constants/constants";
 
 const init = () => {
   return {
-    mode: constants.GAME_MODES.MEDIUM
+    mode: constants.GAME_MODES.EASY
   }
 }
 

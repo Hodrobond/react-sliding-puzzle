@@ -1,4 +1,4 @@
-import {isSolvable, fillBoard, getInversions} from './board';
+import {isSolvable, fillBoard, getInversions, isSame} from './board';
 
 it('isSolveable - 1', () => {
   var board = [[3,9,1,15],[14,11,4,6],[13, false, 10, 12],[2, 7, 8, 5]];
@@ -39,4 +39,12 @@ it('getInversions - 3', () => {
   var answer = getInversions(board);
   const solution = 48;
   expect(answer).toEqual(solution);
+})
+
+it('isSame - 1', () => {
+  var boardA = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,false]];
+  var boardB = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,false]]
+  const ans = isSame(boardA, boardB);
+  var solution = true;
+  expect(ans).toEqual(solution);
 })

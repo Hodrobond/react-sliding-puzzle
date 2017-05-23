@@ -2,7 +2,6 @@ import {isSolvable, fillBoard} from '../utility/board';
 
 export const handleMove = (moveType) => {
   return(dispatch, getState) => {
-    var board = getState().Board;
     dispatch(moveType);
   }
 }
@@ -37,9 +36,11 @@ export const newGame = () => {
     var newBoard = fillBoard(size);
     var isSolve = isSolvable(newBoard);
     while(!isSolve){
-      var newBoard = fillBoard(size);
-      var isSolve = isSolvable(newBoard);
+      console.log("making a new board");
+      newBoard = fillBoard(size);
+      isSolve = isSolvable(newBoard);
     }
+//    var testBoard = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,false,15]]
     dispatch({type: "SET_BOARD", board: newBoard});
   }
 }

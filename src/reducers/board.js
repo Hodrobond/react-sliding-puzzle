@@ -3,9 +3,9 @@ import {findBlank} from '../utility/board';
 var _ = require('lodash');
 
 const init = () => {
-  var arr = new Array(4);
+  var arr = new Array(3);
   for(var i=0; i<arr.length; i++){
-    arr[i] = new Array(4);
+    arr[i] = new Array(3);
     for(var j=0; j<arr[i].length; j++){
       arr[i][j] = false;
     }
@@ -24,7 +24,10 @@ const setBoard = (state, action) => {
 }
 
 const handleMove = (state, action) => {
-  var testBoard = _.cloneDeep(state);
+  var testBoard = [];
+
+  for (var i = 0; i < state.length; i++)
+      testBoard[i] = state[i].slice();
   var blank = findBlank(testBoard);
   var x, y;
   switch(action.type){
