@@ -11,7 +11,8 @@ class solverButton extends React.Component{
   render() {
     return (
       <div className="solver-button">
-        <button className="toggle-solver" onClick={this.props.solve}></button>
+        <p>Warning: This should work on 3x3 boards, might work on 4x4, and probably will not work on 5x5</p>
+        <button className="toggle-solver" onClick={this.props.solve}>Auto-Solve</button>
       </div>
     )
   }

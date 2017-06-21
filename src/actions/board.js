@@ -33,7 +33,7 @@ export const handleMoveLeft = () => {
 export const newGame = () => {
   return(dispatch, getState) => {
     var size = getState().GameState.mode.height;
-    var newBoard = fillBoard(size);
+    var newBoard = fillBoard(size);//[[ 1, 2, 6],[ 4, 5, 3],[ 8, 7, false]];//[[false,2,3],[4,5,6],[8,7,1]];
     var isSolve = isSolvable(newBoard);
     while(!isSolve){
       console.log("making a new board");

@@ -12,7 +12,7 @@ import './index.css'
 
 const rootEl = document.getElementById('root')
 const render = () => ReactDOM.render(
-    <Provider store={createStore(combinedReducer, applyMiddleware(logger, thunk))}>
+    <Provider store={createStore(combinedReducer, applyMiddleware(/*logger, */thunk))}>
         <App/>
     </Provider>,
     rootEl
